@@ -1,0 +1,21 @@
+.section-title {
+  color: rgb(253, 0, 156);
+}
+
+.link-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.link-contact a:hover {
+  text-decoration: none;
+}
+
+.info-icon {
+  color: rgb(253, 0, 156);
+  font-size: 3rem;
+  margin: 20px;
+}

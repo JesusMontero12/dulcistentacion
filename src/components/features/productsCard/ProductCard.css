@@ -1,0 +1,104 @@
+.section-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(80, 80, 80);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.content-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link-product {
+  text-decoration: none;
+}
+
+.card-product {
+  margin: auto;
+  height: 400px;
+}
+.card-img-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-body .card-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(253, 0, 156);
+}
+
+.item-precio {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: rgb(87, 86, 86) !important;
+}
+
+.item-porciones {
+  color: rgb(45, 45, 45);
+  margin-bottom: 10px;
+}
+
+.card-body .card-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+  color: rgb(45, 45, 45);
+}
+
+.card-product:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-product:hover .card-body {
+  height: 250px;
+  transition: all ease 0.5s;
+}
+
+.link-vermas {
+  display: inline-block; /* Permite que transform funcione correctamente */
+  padding: 15px 20px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(253, 0, 156);
+  transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out,
+    color 0.1s ease-in-out;
+}
+
+.link-vermas:hover {
+  color: rgb(253, 0, 156);
+  border: 1px solid rgb(253, 0, 156);
+  background-color: #fff;
+}
+
+.link-vermas:active {
+  transform: scale(0.9); /* Efecto de reducción al hacer clic */
+}
