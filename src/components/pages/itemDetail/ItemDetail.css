@@ -1,0 +1,67 @@
+.badge-detail {
+  margin-bottom: 10px;
+  background-color: var(--bg-color) !important;
+}
+
+.nombre-detail {
+  margin-bottom: 15px;
+  font-family: var(--font-text);
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+.rating-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.reviews-detail {
+  color: var(--text-color);
+}
+
+.precio-detail {
+  margin-bottom: 15px;
+  color: var(--text-color);
+  font-family: var(--font-text);
+  font-size: var(--size-title);
+  font-weight: bold;
+}
+
+.preparacion-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.porciones-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.descripcion-detail {
+  margin-bottom: 15px;
+  font-family: var(--font-text);
+  font-size: var(--size-title);
+  color: var(--text-color);
+}
+
+.button-add-detail {
+  color: white;
+  background-color: var(--button-bg);
+  border-color: var(--button-bg);
+  padding: 10px;
+}
+
+.button-add-detail:hover {
+  background-color: var(--button-hover);
+  border-color: var(--button-hover);
+}
+
+.button-add-detail:active {
+  background-color: var(--button-bg) !important;
+  border-color: var(--button-bg) !important;
+  transform: scale(0.9);
+}

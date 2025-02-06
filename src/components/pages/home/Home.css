@@ -33,6 +33,15 @@
   font-weight: 600;
 }
 
+.section-title-home {
+  font-family: var(--font-title);
+  font-size: var(--size-title);
+  font-weight: 600;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .lead {
   color: #ffff;
   font-family: "Poppins", sans-serif;
@@ -62,5 +71,5 @@
 }
 
 .link-explorar:active {
-  transform: scale(0.9); /* Efecto de reducción al hacer clic */
+  transform: scale(0.9);
 }
