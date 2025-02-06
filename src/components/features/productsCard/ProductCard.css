@@ -1,59 +1,20 @@
-.section-title {
-  font-family: "Great Vibes", cursive;
-  font-size: 2rem;
-  font-weight: 600;
-  color: rgb(80, 80, 80);
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.content-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.link-product {
-  text-decoration: none;
-}
-
-.card-product {
-  margin: auto;
-  height: 400px;
-}
-.card-img-container {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-}
-
-.product-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.card-body .card-title {
+.card-title {
   font-family: "Great Vibes", cursive;
   font-size: 1.5rem;
   font-weight: 300;
   text-align: center;
-  color: rgb(253, 0, 156);
+  color: var(--title-color);
+}
+
+.badge-precio {
+  background-color: var(--bg-color) !important;
 }
 
 .item-precio {
   font-family: "Poppins", sans-serif !important;
   font-size: 1.5rem !important;
   font-weight: 600 !important;
-  color: rgb(87, 86, 86) !important;
+  color: var(--text-color) !important;
 }
 
 .item-porciones {
@@ -61,7 +22,7 @@
   margin-bottom: 10px;
 }
 
-.card-body .card-text {
+.card-text {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 300;
@@ -69,17 +30,31 @@
   color: rgb(45, 45, 45);
 }
 
-.card-product:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.button-add-cart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2;
+  padding: 10px 0px;
+  color: var(--button-color);
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-bg);
 }
 
-.card-product:hover .card-body {
-  height: 250px;
-  transition: all ease 0.5s;
+.button-add-cart:hover {
+  background-color: var(--button-hover);
+  border: 1px solid var(--button-bg);
+}
+
+.button-add-cart:active {
+  background-color: var(--button-bg) !important;
+  border: 1px solid var(--button-bg) !important;
+  transform: scale(0.9);
 }
 
 .link-vermas {
-  display: inline-block; /* Permite que transform funcione correctamente */
+  display: inline-block;
   padding: 15px 20px;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
@@ -87,16 +62,16 @@
   font-weight: 300;
   border: none;
   border-radius: 5px;
-  color: #fff;
-  background-color: rgb(253, 0, 156);
+  color: var(--button-color);
+  background-color: var(--button-bg);
   transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out,
     color 0.1s ease-in-out;
 }
 
 .link-vermas:hover {
-  color: rgb(253, 0, 156);
-  border: 1px solid rgb(253, 0, 156);
-  background-color: #fff;
+  color: var(--button-hover);
+  border: 1px solid var(--button-hover);
+  background-color: var(--button-color);
 }
 
 .link-vermas:active {
