@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductCard from "./ProductCard.jsx";
 import { products } from "../../../data/ProductMock.js";
+import { FavoritesContext } from "../../../context/FavoritesContext.jsx";
 
 const ProductCardLogic = ({ prod }) => {
   const [product, setProduct] = useState([]);
   const [hoveredProductId, setHoveredProductId] = useState(null);
-  const [isLiked, setIsLiked] = useState(false);
+  const { addToFavorites, isFavorites } = useContext(FavoritesContext);
 
   const handleHover = (id, isHovering) => {
     if (isHovering) {
@@ -24,8 +25,8 @@ const ProductCardLogic = ({ prod }) => {
     handleHover,
     hoveredProductId,
     prod,
-    isLiked,
-    setIsLiked,
+    addToFavorites,
+    isFavorites,
   };
   return (
     <>
