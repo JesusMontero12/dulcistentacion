@@ -17,9 +17,10 @@ const ItemDetail = ({ data }) => {
     itemDetail,
     selectedImage,
     setSelectedImage,
-    isWishlisted,
-    setIsWishlisted,
     renderStars,
+    addToFavorites,
+    isFavorites,
+    addToCart,
   } = data;
 
   return (
@@ -46,16 +47,15 @@ const ItemDetail = ({ data }) => {
                         borderRadius: "30px",
                       }}
                     />
-
                     <Button
-                      variant={isWishlisted ? "danger" : "light"}
+                      variant={isFavorites(itemDetail.id) ? "danger" : "light"}
                       className="position-absolute top-0 end-0 m-2 rounded-circle p-2"
-                      onClick={() => setIsWishlisted(!isWishlisted)}
+                      onClick={() => addToFavorites(itemDetail)}
                       style={{ width: "40px", height: "40px", zIndex: 1 }}
                     >
                       <BsHeart
                         size={20}
-                        color={isWishlisted ? "white" : "red"}
+                        color={isFavorites(itemDetail.id) ? "white" : "red"}
                       />
                     </Button>
                   </div>
@@ -112,6 +112,9 @@ const ItemDetail = ({ data }) => {
                       <Button
                         size="lg"
                         className="button-add-detail rounded-pill"
+                        onClick={() => {
+                          addToCart(itemDetail);
+                        }}
                       >
                         <BsCart3 className="me-2" size={20} />
                         Añadir al Carrito

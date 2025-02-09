@@ -1,14 +1,17 @@
 import ItemDetail from "./ItemDetail.jsx";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { products } from "../../../data/ProductMock.js";
 import { BsStar } from "react-icons/bs";
+import { CartContext } from "../../../context/CartContext.jsx";
+import { FavoritesContext } from "../../../context/FavoritesContext.jsx";
 
 const ItemDetailLogic = () => {
   const { id } = useParams();
   const [itemDetail, setItemDetail] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
-  const [isWishlisted, setIsWishlisted] = useState(false);
+  const { addToFavorites, isFavorites } = useContext(FavoritesContext);
+  const { addToCart } = useContext(CartContext);
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, index) => (
@@ -30,9 +33,10 @@ const ItemDetailLogic = () => {
     itemDetail,
     selectedImage,
     setSelectedImage,
-    isWishlisted,
-    setIsWishlisted,
     renderStars,
+    addToFavorites,
+    isFavorites,
+    addToCart,
   };
   return (
     <>
