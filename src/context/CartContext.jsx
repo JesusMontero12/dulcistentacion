@@ -10,7 +10,6 @@ const CartContextProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(cart);
   }, [cart]);
 
   const isInCart = (id) => {
@@ -63,6 +62,7 @@ const CartContextProvider = ({ children }) => {
     getTotalPrice,
     deleteById,
     clearCart,
+    isInCart,
   };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };

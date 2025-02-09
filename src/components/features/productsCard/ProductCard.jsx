@@ -19,6 +19,8 @@ const ProductCard = ({ data }) => {
     addToFavorites,
     isFavorites,
     addToCart,
+    isInCart,
+    navigate,
   } = data;
 
   return (
@@ -137,16 +139,29 @@ const ProductCard = ({ data }) => {
                       </Card.Body>
 
                       <Card.Footer className="bg-white border-0 p-3">
-                        <Button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            addToCart(item);
-                          }}
-                          className="button-add-cart"
-                        >
-                          <BsCart3 size={20} />
-                        </Button>
+                        {isInCart(item.id) ? (
+                          <Button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              navigate("/cart");
+                            }}
+                            className="button-view-cart"
+                          >
+                            ver carrito
+                          </Button>
+                        ) : (
+                          <Button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              addToCart(item);
+                            }}
+                            className="button-add-cart"
+                          >
+                            <BsCart3 size={20} />
+                          </Button>
+                        )}
                       </Card.Footer>
                     </Card>
                   </Link>
@@ -263,16 +278,29 @@ const ProductCard = ({ data }) => {
                       </Card.Body>
 
                       <Card.Footer className="bg-white border-0 p-3">
-                        <Button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            addToCart(item);
-                          }}
-                          className="button-add-cart"
-                        >
-                          <BsCart3 size={20} />
-                        </Button>
+                        {isInCart(item.id) ? (
+                          <Button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              navigate("/cart");
+                            }}
+                            className="button-view-cart"
+                          >
+                            ver carrito
+                          </Button>
+                        ) : (
+                          <Button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              e.preventDefault();
+                              addToCart(item);
+                            }}
+                            className="button-add-cart"
+                          >
+                            <BsCart3 size={20} />
+                          </Button>
+                        )}
                       </Card.Footer>
                     </Card>
                   </Link>

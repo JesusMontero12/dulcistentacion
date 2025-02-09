@@ -3,12 +3,14 @@ import ProductCard from "./ProductCard.jsx";
 import { products } from "../../../data/ProductMock.js";
 import { FavoritesContext } from "../../../context/FavoritesContext.jsx";
 import { CartContext } from "../../../context/CartContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 const ProductCardLogic = ({ prod }) => {
   const [product, setProduct] = useState([]);
   const [hoveredProductId, setHoveredProductId] = useState(null);
   const { addToFavorites, isFavorites } = useContext(FavoritesContext);
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, isInCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const handleHover = (id, isHovering) => {
     if (isHovering) {
@@ -30,6 +32,8 @@ const ProductCardLogic = ({ prod }) => {
     addToFavorites,
     isFavorites,
     addToCart,
+    isInCart,
+    navigate,
   };
   return (
     <>
