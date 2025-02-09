@@ -11,7 +11,6 @@ const CartLogic = () => {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(cart);
   }, [cart]);
 
   const messageClearCart = (msj) => {

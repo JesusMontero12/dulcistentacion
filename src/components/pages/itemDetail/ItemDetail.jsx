@@ -21,6 +21,8 @@ const ItemDetail = ({ data }) => {
     addToFavorites,
     isFavorites,
     addToCart,
+    isInCart,
+    navigate,
   } = data;
 
   return (
@@ -109,16 +111,32 @@ const ItemDetail = ({ data }) => {
                       {itemDetail.descripcion}
                     </p>
                     <div className="d-grid gap-2">
-                      <Button
-                        size="lg"
-                        className="button-add-detail rounded-pill"
-                        onClick={() => {
-                          addToCart(itemDetail);
-                        }}
-                      >
-                        <BsCart3 className="me-2" size={20} />
-                        Añadir al Carrito
-                      </Button>
+                      {isInCart(itemDetail.id) ? (
+                        <Button
+                          size="lg"
+                          className="button-view-cart-detail rounded-pill"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            navigate("/cart");
+                          }}
+                        >
+                          ver carrito
+                        </Button>
+                      ) : (
+                        <Button
+                          size="lg"
+                          className="button-add-detail rounded-pill"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            e.preventDefault();
+                            addToCart(itemDetail);
+                          }}
+                        >
+                          <BsCart3 size={20} />
+                          Añadir al Carrito
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </Col>

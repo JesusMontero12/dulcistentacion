@@ -1,5 +1,5 @@
 import ItemDetail from "./ItemDetail.jsx";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { products } from "../../../data/ProductMock.js";
 import { BsStar } from "react-icons/bs";
@@ -11,7 +11,8 @@ const ItemDetailLogic = () => {
   const [itemDetail, setItemDetail] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
   const { addToFavorites, isFavorites } = useContext(FavoritesContext);
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, isInCart } = useContext(CartContext);
+  const navigate = useNavigate();
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, index) => (
@@ -37,6 +38,8 @@ const ItemDetailLogic = () => {
     addToFavorites,
     isFavorites,
     addToCart,
+    isInCart,
+    navigate,
   };
   return (
     <>
