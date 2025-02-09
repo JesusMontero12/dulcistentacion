@@ -10,7 +10,7 @@ const FavoritesContextProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorite));
-  }, [favorite]); // 🔥 Se asegura que se guarde cuando cambia el estado
+  }, [favorite]); // Se asegura que se guarde cuando cambia el estado
 
   const addToFavorites = (product) => {
     setFavorite((prev) => {

@@ -9,7 +9,7 @@ import { Badge } from "react-bootstrap";
 import { HiOutlineHome } from "react-icons/hi";
 
 const NavBar = ({ data }) => {
-  const { isOpen, setIsOpen } = data;
+  const { isOpen, setIsOpen, dataFavorite, dataCart } = data;
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white  shadow-sm">
       <div className="container">
@@ -41,16 +41,20 @@ const NavBar = ({ data }) => {
             <li className="nav-item">
               <a className="nav-link" href="/cart">
                 <Badge className="badge-navBar">
-                  <span className="badgePosition">3</span>
-                  <BsCart3 className="me-2" size={22} />
+                  {dataCart > 0 && (
+                    <span className="badgePosition">{dataCart}</span>
+                  )}
+                  <BsCart3 className="me-1" size={22} />
                 </Badge>
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/favorites">
                 <Badge className="badge-navBar">
-                  <span className="badgePosition">3</span>
-                  <BsHeart className="me-2" size={22} />
+                  {dataFavorite > 0 && (
+                    <span className="badgePosition">{dataFavorite}</span>
+                  )}
+                  <BsHeart className="me-1" size={22} />
                 </Badge>
               </a>
             </li>
