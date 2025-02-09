@@ -7,6 +7,7 @@ import CartLogic from "./components/features/cart/CartLogic.jsx";
 import ItemListProductLogic from "./components/pages/itemListProduct.jsx/ItemListProductLogic.jsx";
 import ItemDetailLogic from "./components/pages/itemDetail/ItemDetailLogic.jsx";
 import FavoritesContextProvider from "./context/FavoritesContext.jsx";
+import FavoritesLogic from "./components/features/favorites/FavoritesLogic.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route element={<Layouts />}>
               <Route path="/" element={<HomeLogic />} />
               <Route path="/cart" element={<CartLogic />} />
+              <Route path="/favorites" element={<FavoritesLogic />} />
               <Route path="/products" element={<ItemListProductLogic />} />
               <Route path="/product/:id" element={<ItemDetailLogic />} />
             </Route>
