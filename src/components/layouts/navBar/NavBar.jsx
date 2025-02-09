@@ -1,5 +1,12 @@
-import { BsCake } from "react-icons/bs";
+import {
+  BsCake,
+  BsCart3,
+  BsFillMenuButtonWideFill,
+  BsHeart,
+} from "react-icons/bs";
 import "./NavBar.css";
+import { Badge } from "react-bootstrap";
+import { HiOutlineHome } from "react-icons/hi";
 
 const NavBar = ({ data }) => {
   const { isOpen, setIsOpen } = data;
@@ -22,23 +29,29 @@ const NavBar = ({ data }) => {
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Inicio
+              <a className="nav-link my-1 mx-1" href="/">
+                <HiOutlineHome className="me-1" size={24} />
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#menu">
-                Menú
+            <li className="nav-item my-1 mx-1">
+              <a className="nav-link" href="/products">
+                <BsFillMenuButtonWideFill className="me-1" size={22} />
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/cart">
-                Carrito
+                <Badge className="badge-navBar">
+                  <span className="badgePosition">3</span>
+                  <BsCart3 className="me-2" size={22} />
+                </Badge>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">
-                Contacto
+              <a className="nav-link" href="/favorites">
+                <Badge className="badge-navBar">
+                  <span className="badgePosition">3</span>
+                  <BsHeart className="me-2" size={22} />
+                </Badge>
               </a>
             </li>
           </ul>
