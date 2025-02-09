@@ -18,6 +18,7 @@ const ProductCard = ({ data }) => {
     prod,
     addToFavorites,
     isFavorites,
+    addToCart,
   } = data;
 
   return (
@@ -140,6 +141,7 @@ const ProductCard = ({ data }) => {
                           onClick={(e) => {
                             e.stopPropagation();
                             e.preventDefault();
+                            addToCart(item);
                           }}
                           className="button-add-cart"
                         >
@@ -265,6 +267,7 @@ const ProductCard = ({ data }) => {
                           onClick={(e) => {
                             e.stopPropagation();
                             e.preventDefault();
+                            addToCart(item);
                           }}
                           className="button-add-cart"
                         >

@@ -2,11 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import ProductCard from "./ProductCard.jsx";
 import { products } from "../../../data/ProductMock.js";
 import { FavoritesContext } from "../../../context/FavoritesContext.jsx";
+import { CartContext } from "../../../context/CartContext.jsx";
 
 const ProductCardLogic = ({ prod }) => {
   const [product, setProduct] = useState([]);
   const [hoveredProductId, setHoveredProductId] = useState(null);
   const { addToFavorites, isFavorites } = useContext(FavoritesContext);
+  const { addToCart } = useContext(CartContext);
 
   const handleHover = (id, isHovering) => {
     if (isHovering) {
@@ -27,6 +29,7 @@ const ProductCardLogic = ({ prod }) => {
     prod,
     addToFavorites,
     isFavorites,
+    addToCart,
   };
   return (
     <>
