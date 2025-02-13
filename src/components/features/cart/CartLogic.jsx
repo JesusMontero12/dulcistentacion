@@ -2,12 +2,14 @@ import { useContext, useEffect, useState } from "react";
 import Cart from "./Cart.jsx";
 import { CartContext } from "../../../context/CartContext.jsx";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CartLogic = () => {
   const { cart, setCart, getTotalItems, getTotalPrice, deleteById, clearCart } =
     useContext(CartContext);
   let totalProd = getTotalItems();
   let total = getTotalPrice();
+  const navigate = useNavigate();
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -85,6 +87,7 @@ const CartLogic = () => {
     deleteById,
     messageDelete,
     messageClearCart,
+    navigate,
   };
   return (
     <>

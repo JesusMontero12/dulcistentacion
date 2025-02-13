@@ -8,6 +8,7 @@ import ItemListProductLogic from "./components/pages/itemListProduct.jsx/ItemLis
 import ItemDetailLogic from "./components/pages/itemDetail/ItemDetailLogic.jsx";
 import FavoritesContextProvider from "./context/FavoritesContext.jsx";
 import FavoritesLogic from "./components/features/favorites/FavoritesLogic.jsx";
+import FormPayLogic from "./components/features/formPay/FormPayLogic.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/favorites" element={<FavoritesLogic />} />
               <Route path="/products" element={<ItemListProductLogic />} />
               <Route path="/product/:id" element={<ItemDetailLogic />} />
+              <Route path="/formPay" element={<FormPayLogic />} />
             </Route>
           </Routes>
         </FavoritesContextProvider>

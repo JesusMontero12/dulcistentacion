@@ -11,8 +11,8 @@ const Cart = ({ data }) => {
     total,
     totalProd,
     messageDelete,
-    clearCart,
     messageClearCart,
+    navigate,
   } = data;
   return (
     <Container className="py-5">
@@ -118,7 +118,13 @@ const Cart = ({ data }) => {
               </Col>
             </Row>
             <div className="d-grid gap-2 mt-4">
-              <Button className="button-cart-pago" size="lg">
+              <Button
+                onClick={() => {
+                  navigate("/formPay");
+                }}
+                className="button-cart-pago"
+                size="lg"
+              >
                 Proceder al pago
               </Button>
             </div>
