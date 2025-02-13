@@ -29,6 +29,7 @@ const Home = ({ data }) => {
 
       <section className="py-5" id="menu">
         <div className="container">
+          <h2 className="section-title-home">Nuestras Delicias</h2>
           <ProductCardLogic prod={displayProduct} />
 
           {/* Botón "Ver más" si hay más de 3 productos */}

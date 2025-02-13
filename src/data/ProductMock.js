@@ -11,6 +11,29 @@ export const products = [
     porciones: "8-10 porciones",
     rating: 4.8,
     reviews: 96,
+    caracteristicas: [
+      "Ingredientes 100% naturales",
+      "Sin conservantes artificiales",
+      "Elaboración artesanal diaria",
+      "Chocolate belga premium",
+      "Opción sin gluten disponible",
+    ],
+    comentarios: [
+      {
+        user: "María L.",
+        rating: 5,
+        comment:
+          "¡Increíble! El mejor pastel de chocolate que he probado. La textura es perfecta.",
+        date: "2024-02-15",
+      },
+      {
+        user: "Carlos R.",
+        rating: 5,
+        comment:
+          "Excelente calidad y presentación. Ideal para celebraciones especiales.",
+        date: "2024-02-10",
+      },
+    ],
   },
   {
     id: 2,
@@ -24,6 +47,29 @@ export const products = [
     porciones: "8-10 porciones",
     rating: 4.8,
     reviews: 96,
+    caracteristicas: [
+      "Ingredientes 100% naturales",
+      "Sin conservantes artificiales",
+      "Elaboración artesanal diaria",
+      "Chocolate belga premium",
+      "Opción sin gluten disponible",
+    ],
+    comentarios: [
+      {
+        user: "María L.",
+        rating: 5,
+        comment:
+          "¡Increíble! El mejor pastel de chocolate que he probado. La textura es perfecta.",
+        date: "2024-02-15",
+      },
+      {
+        user: "Carlos R.",
+        rating: 5,
+        comment:
+          "Excelente calidad y presentación. Ideal para celebraciones especiales.",
+        date: "2024-02-10",
+      },
+    ],
   },
   {
     id: 3,
@@ -37,6 +83,29 @@ export const products = [
     porciones: "8-10 porciones",
     rating: 4.8,
     reviews: 96,
+    caracteristicas: [
+      "Ingredientes 100% naturales",
+      "Sin conservantes artificiales",
+      "Elaboración artesanal diaria",
+      "Chocolate belga premium",
+      "Opción sin gluten disponible",
+    ],
+    comentarios: [
+      {
+        user: "María L.",
+        rating: 5,
+        comment:
+          "¡Increíble! El mejor pastel de chocolate que he probado. La textura es perfecta.",
+        date: "2024-02-15",
+      },
+      {
+        user: "Carlos R.",
+        rating: 5,
+        comment:
+          "Excelente calidad y presentación. Ideal para celebraciones especiales.",
+        date: "2024-02-10",
+      },
+    ],
   },
   {
     id: 4,
@@ -50,5 +119,28 @@ export const products = [
     porciones: "8-10 porciones",
     rating: 4.8,
     reviews: 96,
+    caracteristicas: [
+      "Ingredientes 100% naturales",
+      "Sin conservantes artificiales",
+      "Elaboración artesanal diaria",
+      "Chocolate belga premium",
+      "Opción sin gluten disponible",
+    ],
+    comentarios: [
+      {
+        user: "María L.",
+        rating: 5,
+        comment:
+          "¡Increíble! El mejor pastel de chocolate que he probado. La textura es perfecta.",
+        date: "2024-02-15",
+      },
+      {
+        user: "Carlos R.",
+        rating: 5,
+        comment:
+          "Excelente calidad y presentación. Ideal para celebraciones especiales.",
+        date: "2024-02-10",
+      },
+    ],
   },
 ];

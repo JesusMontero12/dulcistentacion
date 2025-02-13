@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap");
 
+/* variables */
+:root {
+  /* colores */
+  --button-bg: #ff5151;
+  --button-hover: #ff6b6b;
+  --button-color: #ffff;
+  --title-color: #4a4a4a;
+  --text-color: #666;
+  --bg-color: #ff6b6b;
+
+  /* tipografias */
+  --font-title: "Great Vibes", cursive;
+  --font-text: "Poppins", sans-serif;
+  --font-other: "Montserrat";
+
+  /* tamano de tipografias */
+
+  --size-title: 2rem;
+  --size-text: 1rem;
+  --size-other: 0.75rem;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,46 +1,94 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Cart from "./Cart.jsx";
+import { CartContext } from "../../../context/CartContext.jsx";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CartLogic = () => {
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      name: "Pastel de Chocolate",
-      price: 28.99,
-      quantity: 1,
-      image:
-        "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 2,
-      name: "Cupcakes Red Velvet",
-      price: 15.99,
-      quantity: 2,
-      image:
-        "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=800&q=80",
-    },
-  ]);
+  const { cart, setCart, getTotalItems, getTotalPrice, deleteById, clearCart } =
+    useContext(CartContext);
+  let totalProd = getTotalItems();
+  let total = getTotalPrice();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  const messageClearCart = (msj) => {
+    Swal.fire({
+      title: "¡Espera!",
+      text: msj,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Continuar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        clearCart();
+        Swal.fire({
+          icon: "success",
+          title: "¡Genial!",
+          text: "Ya puedes hacer compras nuevas.",
+          showConfirmButton: false,
+          timer: 3500,
+        });
+      }
+    });
+  };
+
+  const messageDelete = (msj, img, id) => {
+    Swal.fire({
+      imageUrl: img,
+      imageHeight: 100,
+      title: "¡Espera!",
+      text: msj,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Continuar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteById(id);
+        Swal.fire({
+          icon: "success",
+          title: "¡Genial!",
+          text: "Producto eliminado con exito",
+          showConfirmButton: false,
+          timer: 3500,
+        });
+      }
+    });
+  };
 
   const updateQuantity = (id, change) => {
-    setCartItems(
-      cartItems
+    setCart(
+      cart
         .map((item) => {
           if (item.id === id) {
-            const newQuantity = Math.max(0, item.quantity + change);
-            return { ...item, quantity: newQuantity };
+            const newQuantity = Math.max(0, item.cantidad + change);
+            return { ...item, cantidad: newQuantity };
           }
           return item;
         })
-        .filter((item) => item.quantity > 0)
+        .filter((item) => item.cantidad > 0)
     );
   };
 
-  const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
-
-  let data = { cartItems, updateQuantity, total };
+  let data = {
+    cart,
+    updateQuantity,
+    total,
+    totalProd,
+    deleteById,
+    messageDelete,
+    messageClearCart,
+    navigate,
+  };
   return (
     <>
       <Cart data={data} />
