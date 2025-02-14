@@ -40,6 +40,7 @@ const FormPayLogic = () => {
   };
 
   const handleRegionChange = (e) => {
+    e.preventDefault()
     const regionName = e.target.value;
     setSelectedRegion(regionName);
 
