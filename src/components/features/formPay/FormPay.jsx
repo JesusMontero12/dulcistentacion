@@ -102,7 +102,7 @@ const FormPay = ({ data }) => {
                   value={selectedCommunes} // Debe ser una cadena
                   onChange={(e) => {
                     setSelectedCommunes(e.target.value); // Actualiza el estado con un solo valor
-                    handleRegionChange(e);
+                    handleChange(e);
                   }}
                   disabled={!selectedRegion}
                 >
