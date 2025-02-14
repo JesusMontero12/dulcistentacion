@@ -22,8 +22,8 @@ function App() {
               <Route path="/favorites" element={<FavoritesLogic />} />
               <Route path="/products" element={<ItemListProductLogic />} />
               <Route path="/product/:id" element={<ItemDetailLogic />} />
-              <Route path="/formPay" element={<FormPayLogic />} />
             </Route>
+            <Route path="/formPay" element={<FormPayLogic />} />
           </Routes>
         </FavoritesContextProvider>
       </CartContextProvider>

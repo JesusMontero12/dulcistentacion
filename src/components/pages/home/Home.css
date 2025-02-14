@@ -29,7 +29,7 @@
 .hero-title {
   color: #ffff;
   font-family: "Poppins", sans-serif;
-  font-size: 4rem;
+  font-size: clamp(1.6rem, 5vw, 4rem);
   font-weight: 600;
 }
 
@@ -46,6 +46,7 @@
   color: #ffff;
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   font-weight: 300;
 }
 
