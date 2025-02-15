@@ -34,7 +34,7 @@ const FormPay = ({ data }) => {
   console.log(formData);
   return (
     <>
-      <Container className="d-flex justify-content-center align-items-center min-vh-100 bg-light my-5">
+      <Container className="d-flex justify-content-center align-items-center min-vh-100 my-5">
         <Card className="shadow-lg p-4 w-100" style={{ maxWidth: "500px" }}>
           <Card.Body>
             <div className="text-center mb-4">

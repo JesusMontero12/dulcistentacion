@@ -9,14 +9,14 @@
   border: none;
   border-radius: 5px;
   color: #fff;
-  background-color: rgb(253, 0, 156);
+  background-color: var(--frambuesaVibrante);
   transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out,
     color 0.1s ease-in-out;
 }
 
 .link-menu-cart:hover {
-  color: rgb(253, 0, 156);
-  border: 1px solid rgb(253, 0, 156);
+  color: var(--frambuesaVibrante);
+  border: 1px solid var(--frambuesaVibrante);
   background-color: #fff;
 }
 
@@ -32,17 +32,17 @@
   gap: 2;
   padding: 10px 0px;
   color: var(--button-color);
-  background-color: var(--button-bg);
-  border: 1px solid var(--button-bg);
+  background-color: var(--frambuesaVibrante);
+  border: 1px solid var(--frambuesaVibrante);
 }
 
 .button-cart-pago:hover {
-  background-color: var(--button-hover);
-  border: 1px solid var(--button-bg);
+  background-color: var(--frambuesaVibranteHover);
+  border: 1px solid var(--frambuesaVibrante);
 }
 
 .button-cart-pago:active {
-  background-color: var(--button-bg) !important;
-  border: 1px solid var(--button-bg) !important;
+  background-color: var(--frambuesaVibrante) !important;
+  border: 1px solid var(--frambuesaVibrante) !important;
   transform: scale(0.9);
 }
