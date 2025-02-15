@@ -20,7 +20,7 @@ const FormPayLogic = () => {
     deliveryType: "delivery",
     paymentMethod: "",
   });
-  const [companyPhone, setCompanyPhone] = useState("+56982042817");
+  const [companyPhone, setCompanyPhone] = useState("+56950834824");
   const [selectedCountry, setSelectedCountry] = useState(countries[0]);
   const [selectedRegion, setSelectedRegion] = useState("");
   const [selectedCommunes, setSelectedCommunes] = useState("");

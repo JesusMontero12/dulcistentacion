@@ -70,7 +70,7 @@ const Favorites = ({ data }) => {
                 <p className="text-muted mb-0">
                   ¡Agrega algunos deliciosos postres a tu lista!
                 </p>
-                <Link to="/products" className="link-menu-cart">
+                <Link to="/products" className="link-menu-favorite">
                   Ver Menú
                 </Link>
               </div>
