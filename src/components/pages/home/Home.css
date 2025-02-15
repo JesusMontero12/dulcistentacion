@@ -1,3 +1,7 @@
+.body-home {
+  background: linear-gradient(to bottom, #fcecd3, #ffffff);
+}
+
 .hero-section {
   position: relative;
   padding: 100px 50px;
@@ -11,7 +15,7 @@
   justify-content: center;
   text-align: center;
   color: white;
-  z-index: 1;
+  z-index: 0;
 }
 
 .hero-section::before {
@@ -35,11 +39,11 @@
 
 .section-title-home {
   font-family: var(--font-title);
-  font-size: var(--size-title);
+  font-size: clamp(1.6rem, 5vw, 3rem);
   font-weight: 600;
-  color: var(--title-color);
+  color: var(--chocolateOscuro);
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .lead {
@@ -60,17 +64,46 @@
   border: none;
   border-radius: 5px;
   color: #fff;
-  background-color: rgb(253, 0, 156);
+  background-color: var(--frambuesaVibrante);
   transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out,
     color 0.1s ease-in-out;
 }
 
 .link-explorar:hover {
-  color: rgb(253, 0, 156);
-  border: 1px solid rgb(253, 0, 156);
+  color: var(--frambuesaVibranteHover);
+  border: 1px solid var(--frambuesaVibranteHover);
   background-color: #fff;
 }
 
 .link-explorar:active {
+  color: #fff;
+  background-color: var(--frambuesaVibrante);
+  transform: scale(0.9);
+}
+
+.link-vermas {
+  display: inline-block; /* Permite que transform funcione correctamente */
+  padding: 15px 20px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--frambuesaVibrante);
+  transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out,
+    color 0.1s ease-in-out;
+}
+
+.link-vermas:hover {
+  color: #fff;
+  border: 1px solid var(--frambuesaVibranteHover);
+  background-color: var(--frambuesaVibranteHover);
+}
+
+.link-vermas:active {
+  color: #fff;
+  background-color: var(--frambuesaVibrante);
   transform: scale(0.9);
 }

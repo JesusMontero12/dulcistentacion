@@ -36,7 +36,7 @@ const ProductCard = ({ data }) => {
                   >
                     <Card
                       key={item.id}
-                      className="h-100 w-100 border-0 shadow-sm"
+                      className="card-product h-100 w-100 border-0 shadow-sm"
                       style={{
                         transform: hoveredProductId
                           ? "translateY(-10px)"
@@ -97,12 +97,12 @@ const ProductCard = ({ data }) => {
                           {item.descripcion.slice(0, 50) + "..."}
                         </Card.Text>
 
-                        <div className="d-flex align-items-center mb-2">
+                        <div className="d-flex align-items-center mb-1">
                           <LuWheat size={20} className="me-2" />
                           <span className="text-muted">{item.porciones}</span>
                         </div>
 
-                        <div className="mt-2">
+                        {/* <div className="mt-2">
                           <div className="d-flex justify-content-between align-items-center flex-wrap gap-2">
                             <div className="ratings">
                               {[...Array(5)].map((_, index) => {
@@ -135,7 +135,7 @@ const ProductCard = ({ data }) => {
                               ({item.reviews} reviews)
                             </span>
                           </div>
-                        </div>
+                        </div> */}
                       </Card.Body>
 
                       <Card.Footer className="bg-white border-0 p-3">
@@ -175,7 +175,7 @@ const ProductCard = ({ data }) => {
                   >
                     <Card
                       key={item.id}
-                      className="h-100 w-100 border-0 shadow-sm"
+                      className="card-product h-100 w-100 border-0 shadow-sm"
                       style={{
                         transform: hoveredProductId
                           ? "translateY(-10px)"
@@ -236,12 +236,12 @@ const ProductCard = ({ data }) => {
                           {item.descripcion.slice(0, 50) + "..."}
                         </Card.Text>
 
-                        <div className="d-flex align-items-center mb-2">
+                        <div className="d-flex align-items-center mb-1">
                           <LuWheat size={20} className="me-2" />
                           <span className="text-muted">{item.porciones}</span>
                         </div>
 
-                        <div className="mt-2">
+                        {/* <div className="mt-2">
                           <div className="d-flex justify-content-between align-items-center flex-wrap gap-2">
                             <div className="ratings">
                               {[...Array(5)].map((_, index) => {
@@ -274,7 +274,7 @@ const ProductCard = ({ data }) => {
                               ({item.reviews} reviews)
                             </span>
                           </div>
-                        </div>
+                        </div> */}
                       </Card.Body>
 
                       <Card.Footer className="bg-white border-0 p-3">

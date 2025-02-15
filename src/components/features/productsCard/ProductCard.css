@@ -1,3 +1,7 @@
+.card-product {
+  box-shadow: 0px 4px 10px rgba(234, 213, 180, 0.3) !important;
+}
+
 .card-title {
   font-family: "Great Vibes", cursive;
   font-size: 1.5rem;
@@ -7,7 +11,7 @@
 }
 
 .badge-precio {
-  background-color: var(--bg-color) !important;
+  background-color: var(--frambuesaVibrante) !important;
 }
 
 .item-precio {
@@ -37,19 +41,19 @@
   justify-content: center;
   gap: 2;
   padding: 10px 0px;
-  color: var(--button-bg);
+  color: var(--frambuesaVibrante);
   background-color: transparent;
-  border: 1px solid var(--button-bg);
+  border: 1px solid var(--frambuesaVibrante);
 }
 
 .button-view-cart:hover {
-  background-color: var(--button-hover);
-  border: 1px solid var(--button-bg);
+  background-color: var(--frambuesaVibranteHover);
+  border: 1px solid var(--frambuesaVibranteHover);
 }
 
 .button-view-cart:active {
-  background-color: var(--button-bg) !important;
-  border: 1px solid var(--button-bg) !important;
+  background-color: var(--frambuesaVibrante) !important;
+  border: 1px solid var(--frambuesaVibrante) !important;
   transform: scale(0.9);
 }
 
@@ -61,42 +65,17 @@
   gap: 2;
   padding: 10px 0px;
   color: var(--button-color);
-  background-color: var(--button-bg);
-  border: 1px solid var(--button-bg);
+  background-color: var(--frambuesaVibrante);
+  border: 1px solid var(--frambuesaVibrante);
 }
 
 .button-add-cart:hover {
-  background-color: var(--button-hover);
-  border: 1px solid var(--button-bg);
+  background-color: var(--frambuesaVibranteHover);
+  border: 1px solid var(--frambuesaVibranteHover);
 }
 
 .button-add-cart:active {
-  background-color: var(--button-bg) !important;
-  border: 1px solid var(--button-bg) !important;
+  background-color: var(--frambuesaVibrante) !important;
+  border: 1px solid var(--frambuesaVibrante) !important;
   transform: scale(0.9);
-}
-
-.link-vermas {
-  display: inline-block;
-  padding: 15px 20px;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  border: none;
-  border-radius: 5px;
-  color: var(--button-color);
-  background-color: var(--button-bg);
-  transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out,
-    color 0.1s ease-in-out;
-}
-
-.link-vermas:hover {
-  color: var(--button-hover);
-  border: 1px solid var(--button-hover);
-  background-color: var(--button-color);
-}
-
-.link-vermas:active {
-  transform: scale(0.9); /* Efecto de reducción al hacer clic */
 }
