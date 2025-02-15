@@ -1,14 +1,25 @@
+.body-item-detail {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, var(--marfilSuave), #ffff);
+}
+
+.border-custom {
+  border: 1px solid var(--frambuesaVibrante);
+}
+
 .badge-detail {
+  padding: 6px;
   margin-bottom: 10px;
-  background-color: var(--bg-color) !important;
+  background-color: var(--caramelo) !important;
 }
 
 .nombre-detail {
   margin-bottom: 15px;
   font-family: var(--font-text);
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
   font-weight: bold;
-  color: var(--title-color);
+  color: var(--chocolateOscuro);
 }
 
 .rating-detail {
@@ -44,42 +55,42 @@
 .descripcion-detail {
   margin-bottom: 15px;
   font-family: var(--font-text);
-  font-size: var(--size-title);
+  font-size: clamp(1.6rem, 3vw, 2rem);
   color: var(--text-color);
 }
 
 .button-view-cart-detail {
-  color: var(--button-bg);
+  color: var(--frambuesaVibrante);
   background-color: transparent;
-  border-color: var(--button-bg);
+  border-color: var(--frambuesaVibrante);
   padding: 10px;
 }
 
 .button-view-cart-detail:hover {
-  background-color: var(--button-hover);
-  border-color: var(--button-hover);
+  background-color: var(--frambuesaVibranteHover);
+  border-color: var(--frambuesaVibranteHover);
 }
 
 .button-view-cart-detail:active {
-  background-color: var(--button-bg) !important;
-  border-color: var(--button-bg) !important;
+  background-color: var(--frambuesaVibrante) !important;
+  border-color: var(--frambuesaVibrante) !important;
   transform: scale(0.9);
 }
 
 .button-add-detail {
   color: white;
-  background-color: var(--button-bg);
-  border-color: var(--button-bg);
+  background-color: var(--frambuesaVibrante);
+  border-color: var(--frambuesaVibrante);
   padding: 10px;
 }
 
 .button-add-detail:hover {
-  background-color: var(--button-hover);
-  border-color: var(--button-hover);
+  background-color: var(--frambuesaVibranteHover);
+  border-color: var(--frambuesaVibranteHover);
 }
 
 .button-add-detail:active {
-  background-color: var(--button-bg) !important;
-  border-color: var(--button-bg) !important;
+  background-color: var(--frambuesaVibrante) !important;
+  border-color: var(--frambuesaVibrante) !important;
   transform: scale(0.9);
 }

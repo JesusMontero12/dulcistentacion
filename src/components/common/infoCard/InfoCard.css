@@ -1,5 +1,9 @@
 .section-title {
-  color: rgb(253, 0, 156);
+  color: var(--chocolateOscuro);
+}
+
+.section-text {
+  color: var(--chocolateOscuro);
 }
 
 .link-contact {
@@ -15,7 +19,7 @@
 }
 
 .info-icon {
-  color: rgb(253, 0, 156);
+  color: var(--frambuesaVibrante);
   font-size: 3rem;
   margin: 20px;
 }
