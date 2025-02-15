@@ -1,12 +1,15 @@
 import "./ItemListProduct.css";
 import ProductCardLogic from "../../features/productsCard/ProductCardLogic.jsx";
+import { Container } from "react-bootstrap";
 
 const ItemListProduct = () => {
   return (
     <>
-      <div className="m-5 p-3">
-        <ProductCardLogic />
-      </div>
+      <Container fluid className="body-item-list">
+        <div className="p-3">
+          <ProductCardLogic />
+        </div>
+      </Container>
     </>
   );
 };

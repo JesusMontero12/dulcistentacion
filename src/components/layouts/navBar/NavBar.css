@@ -1,7 +1,26 @@
+.navbar {
+  top: 0;
+  left: 0;
+  position: sticky;
+  background: linear-gradient(
+    to bottom,
+    var(--cremaVainilla),
+    var(--marfilSuave)
+  );
+  z-index: 1;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .nav-link {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  color: var(--chocolateOscuro);
   transition: all 0.3s ease;
 }
 
@@ -11,7 +30,7 @@
   font-size: 0.625rem;
   border-radius: 50%;
   border-style: none !important;
-  color: var(--title-color);
+  color: var(--chocolateOscuro);
   background-color: transparent !important;
 }
 
@@ -25,7 +44,7 @@
   right: 0;
   font-size: 10px;
   color: white;
-  background-color: red !important;
+  background-color: var(--frambuesaVibrante) !important;
   transform: translate(15%, -30%);
   border-radius: 10px !important;
 }

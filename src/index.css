@@ -2,6 +2,14 @@
 
 /* variables */
 :root {
+  --rosaPastel: #f8c8dc;
+  --caramelo: #d89a67;
+  --cremaVainilla: #fcecd3;
+  --marfilSuave: #faf1e6;
+  --chocolateOscuro: #5e3d2b;
+  --frambuesaVibrante: #c7365f;
+  --frambuesaVibranteHover: #a02a50;
+
   /* colores */
   --button-bg: #ff5151;
   --button-hover: #ff6b6b;

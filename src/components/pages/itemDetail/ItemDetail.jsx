@@ -29,7 +29,7 @@ const ItemDetail = ({ data }) => {
     <>
       {itemDetail && (
         <div
-          className="bg-light min-vh-100"
+          className="body-item-detail min-vh-100"
           style={{ backgroundColor: "#FFF9F5" }}
         >
           {/* Hero Section with Product Info */}
@@ -68,7 +68,7 @@ const ItemDetail = ({ data }) => {
                           src={img}
                           alt={`${itemDetail.nombre} ${index + 1}`}
                           className={`img-thumbnail cursor-pointer ${
-                            selectedImage === index ? "border-warning" : ""
+                            selectedImage === index ? "border-custom" : ""
                           }`}
                           style={{
                             height: "80px",
@@ -88,14 +88,14 @@ const ItemDetail = ({ data }) => {
                   <div className="ps-lg-4">
                     <Badge className="badge-detail">Destacado</Badge>
                     <h1 className="nombre-detail">{itemDetail.nombre}</h1>
-                    <div className="rating-detail">
+                    {/* <div className="rating-detail">
                       <div className="me-3">
                         {renderStars(itemDetail.rating)}
                       </div>
                       <span className="reviews-detail ">
                         ({itemDetail.reviews} reseñas)
                       </span>
-                    </div>
+                    </div> */}
                     <h2 className="precio-detail">${itemDetail.precio}</h2>
                     <div className="preparacion-detail">
                       <BsClock size={20} className="me-2" />
@@ -150,7 +150,7 @@ const ItemDetail = ({ data }) => {
               <Col lg={8}>
                 <Card
                   className="border-0 shadow-sm"
-                  style={{ borderRadius: "20px", backgroundColor: "#FFF9F5" }}
+                  style={{ borderRadius: "20px" }}
                 >
                   <Card.Body className="p-5">
                     <h3
@@ -187,7 +187,7 @@ const ItemDetail = ({ data }) => {
           </Container>
 
           {/* Reviews Section */}
-          <Container className="pb-5">
+          {/* <Container className="pb-5">
             <Row className="justify-content-center">
               <Col lg={8}>
                 <Card
@@ -266,7 +266,7 @@ const ItemDetail = ({ data }) => {
                 ))}
               </Col>
             </Row>
-          </Container>
+          </Container> */}
         </div>
       )}
     </>

@@ -11,10 +11,10 @@ import { HiOutlineHome } from "react-icons/hi";
 const NavBar = ({ data }) => {
   const { isOpen, setIsOpen, dataFavorite, dataCart } = data;
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-white  shadow-sm">
+    <nav className="navbar navbar-expand-md navbar-light  shadow-sm">
       <div className="container">
-        <a className="navbar-brand d-flex align-items-center" href="/">
-          <BsCake className="info-icon" />
+        <a className="navbar-brand " href="/">
+          <BsCake className="info-icon m-0 p-0" />
           <span>Dulcis'Tentación</span>
         </a>
 
